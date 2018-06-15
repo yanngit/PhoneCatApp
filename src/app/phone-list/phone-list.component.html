@@ -1,0 +1,16 @@
+<div class="col-sm-3">
+  <div class="form-group">
+      <label for="searchInput">Search: </label>
+      <input id="searchInput" [(ngModel)]="query"/>
+  </div>
+  <ul class="list-group">
+      <li class="list-group-item active">Phone list: </li>
+      <li *ngFor="let phone of phones" class="list-group-item">
+          {{phone.name}}
+          <a href="#/phones/{{phone.id}}"><img [src]="phone.imageUrl" class="img-thumbnail"/></a>
+          <p> Description : <br />
+              {{phone.snippet}}
+          </p>
+      </li>
+  </ul>
+</div>
